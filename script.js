@@ -1,3 +1,14 @@
+// Map of ICAO codes to airport names
+const airportNames = {
+    "EGLL": "London Heathrow",
+    "EGKK": "London Gatwick",
+    "KLAX": "Los Angeles International",
+    "JFK": "John F. Kennedy International",
+    "MAN": "Manchester Airport",
+    "BOS": "Boston Logan International",
+    // Add more airports as needed
+};
+
 const planeImages = {
     "Airbus A350": "a350.jpg",
     "Boeing 787": "b787.jpg",
@@ -21,14 +32,22 @@ async function fetchFlights() {
             const aircraft = flight[0] || "Unknown Aircraft"; // Default if aircraft type is missing
             const imageSrc = planeImages[aircraft] || "default.jpg"; // Fallback to default image
 
+            // Get departure and arrival ICAO codes (if available)
+            const departure = flight[2] || "Unknown";
+            const arrival = flight[3] || "Unknown";
+
+            // Map ICAO codes to airport names
+            const departureName = airportNames[departure] || departure;
+            const arrivalName = airportNames[arrival] || arrival;
+
             return `
                 <div class="flight">
                     <img src="${imageSrc}" alt="${aircraft}">
                     <div>
                         <h3>Flight: ${flight[1]}</h3>
                         <p>Aircraft: ${aircraft}</p>
-                        <p>From: ${flight[2] || "Unknown"}</p>
-                        <p>To: ${flight[3] || "Unknown"}</p>
+                        <p>From: ${departureName}</p>
+                        <p>To: ${arrivalName}</p>
                     </div>
                 </div>
             `;
