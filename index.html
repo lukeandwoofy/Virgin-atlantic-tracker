@@ -13,6 +13,62 @@
     <h1>Virgin Atlantic Flight Tracker</h1>
     <p>Loading live flight data...</p>
     <div id="flights"></div>
-    <script src="script.js"></script>
+
+    <!-- Flight Information Table -->
+    <div id="flight-info">
+        <h2>Virgin Atlantic Flight Routes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Departure Airport</th>
+                    <th>Arrival Airport</th>
+                    <th>Route Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>VS1</td><td>London Heathrow (LHR)</td><td>Newark (EWR)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS3</td><td>London Heathrow (LHR)</td><td>New York JFK (JFK)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS10</td><td>New York JFK (JFK)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS11</td><td>London Heathrow (LHR)</td><td>Boston (BOS)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS12</td><td>Boston (BOS)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS75</td><td>Manchester (MAN)</td><td>Orlando (MCO)</td><td>Leisure route to USA</td></tr>
+                <tr><td>VS76</td><td>Orlando (MCO)</td><td>Manchester (MAN)</td><td>Return to UK</td></tr>
+                <tr><td>VS91</td><td>London Heathrow (LHR)</td><td>Orlando (MCO)</td><td>Leisure route to USA</td></tr>
+                <tr><td>VS103</td><td>London Heathrow (LHR)</td><td>Atlanta (ATL)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS104</td><td>Atlanta (ATL)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS105</td><td>London Heathrow (LHR)</td><td>Seattle (SEA)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS106</td><td>Seattle (SEA)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS107</td><td>London Heathrow (LHR)</td><td>Nassau (NAS)</td><td>Caribbean route</td></tr>
+                <tr><td>VS107</td><td>Nassau (NAS)</td><td>Montego Bay (MBJ)</td><td>Connecting Caribbean</td></tr>
+                <tr><td>VS108</td><td>Montego Bay (MBJ)</td><td>Nassau (NAS)</td><td>Connecting Caribbean</td></tr>
+                <tr><td>VS108</td><td>Nassau (NAS)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS109</td><td>London Heathrow (LHR)</td><td>Atlanta (ATL)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS109</td><td>Manchester (MAN)</td><td>Atlanta (ATL)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS110</td><td>Atlanta (ATL)</td><td>Manchester (MAN)</td><td>Return to UK</td></tr>
+                <tr><td>VS117</td><td>London Heathrow (LHR)</td><td>Miami (MIA)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS118</td><td>Miami (MIA)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS121</td><td>Manchester (MAN)</td><td>Boston (BOS)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS122</td><td>Boston (BOS)</td><td>Manchester (MAN)</td><td>Return to UK</td></tr>
+                <tr><td>VS127</td><td>Manchester (MAN)</td><td>New York JFK (JFK)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS128</td><td>New York JFK (JFK)</td><td>Manchester (MAN)</td><td>Return to UK</td></tr>
+                <tr><td>VS131</td><td>London Heathrow (LHR)</td><td>Bridgetown (BGI)</td><td>Caribbean route</td></tr>
+                <tr><td>VS132</td><td>Bridgetown (BGI)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS133</td><td>London Heathrow (LHR)</td><td>Antigua (ANU)</td><td>Caribbean route</td></tr>
+                <tr><td>VS133</td><td>Antigua (ANU)</td><td>Montego Bay (MBJ)</td><td>Connecting Caribbean</td></tr>
+                <tr><td>VS134</td><td>Antigua (ANU)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS135</td><td>London Heathrow (LHR)</td><td>Orlando (MCO)</td><td>Leisure route to USA</td></tr>
+                <tr><td>VS136</td><td>Orlando (MCO)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS137</td><td>London Heathrow (LHR)</td><td>New York JFK (JFK)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS138</td><td>New York JFK (JFK)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS141</td><td>London Heathrow (LHR)</td><td>Los Angeles (LAX)</td><td>Transatlantic to USA</td></tr>
+                <tr><td>VS142</td><td>Los Angeles (LAX)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS1015</td><td>London Heathrow (LHR)</td><td>Orlando (MCO)</td><td>Leisure route to USA</td></tr>
+                <tr><td>VS1020</td><td>San Francisco (SFO)</td><td>London Heathrow (LHR)</td><td>Return to UK</td></tr>
+                <tr><td>VS1027</td><td>London Heathrow (LHR)</td><td>Orlando (MCO)</td><td>Leisure route to USA</td></tr>
+                <tr><td>VS1077</td><td>London Heathrow (LHR)</td><td>Bridgetown (BGI)</td><td>Caribbean route</td></tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
