@@ -3,11 +3,11 @@ const airportNames = {
     "EGLL": "London Heathrow",
     "EGKK": "London Gatwick",
     "KLAX": "Los Angeles International",
-    "KJFK": "John F. Kennedy International",
-    "EGCC": "Manchester Airport",
-    "KBOS": "Boston Logan International",
-    "KIAD": "Washington Dulles International",
-    "KSFO": "San Francisco International",
+    "JFK": "John F. Kennedy International",
+    "MAN": "Manchester Airport",
+    "BOS": "Boston Logan International",
+    "ATL": "Hartsfield–Jackson Atlanta International",
+    "SFO": "San Francisco International",
     // Add more airports as needed
 };
 
@@ -26,6 +26,9 @@ async function fetchFlights() {
         const response = await fetch('https://opensky-network.org/api/states/all');
         const data = await response.json();
 
+        // Log raw API data for debugging
+        console.log("Raw API Data:", data);
+
         // Filter for Virgin Atlantic flights (callsign starts with 'VIR')
         const virginFlights = data.states.filter(flight => flight[1]?.startsWith('VIR'));
 
@@ -35,10 +38,10 @@ async function fetchFlights() {
             const imageSrc = planeImages[aircraft] || "default.jpg"; // Fallback to default image
 
             // Get departure and arrival ICAO codes (if available)
-            const departure = flight[2] || "Unknown";
-            const arrival = flight[3] || "Unknown";
+            const departure = flight[2] || "Unknown Code";
+            const arrival = flight[3] || "Unknown Code";
 
-            // Map ICAO codes to airport names
+            // Map ICAO codes to airport names (fallback to raw code if not found)
             const departureName = airportNames[departure] || departure;
             const arrivalName = airportNames[arrival] || arrival;
 
@@ -54,10 +57,18 @@ async function fetchFlights() {
                 </div>
             `;
         }).join('');
+
+        // If no flights are found
+        if (virginFlights.length === 0) {
+            flightsDiv.innerHTML = "<p>No Virgin Atlantic flights found at the moment.</p>";
+        }
+
     } catch (error) {
+        // Handle errors
         flightsDiv.innerHTML = "<p>Failed to load flight data. Please try again later.</p>";
-        console.error(error);
+        console.error("Error fetching flight data:", error);
     }
 }
 
+// Fetch flight data on page load
 fetchFlights();
