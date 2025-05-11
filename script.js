@@ -3,9 +3,11 @@ const airportNames = {
     "EGLL": "London Heathrow",
     "EGKK": "London Gatwick",
     "KLAX": "Los Angeles International",
-    "JFK": "John F. Kennedy International",
-    "MAN": "Manchester Airport",
-    "BOS": "Boston Logan International",
+    "KJFK": "John F. Kennedy International",
+    "EGCC": "Manchester Airport",
+    "KBOS": "Boston Logan International",
+    "KIAD": "Washington Dulles International",
+    "KSFO": "San Francisco International",
     // Add more airports as needed
 };
 
