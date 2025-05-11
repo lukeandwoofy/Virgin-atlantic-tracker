@@ -5,10 +5,20 @@ body {
     margin: 0;
     padding: 0;
 }
+
 h1 {
     color: #d2232a;
     margin-top: 20px;
 }
+
+p {
+    color: #333;
+}
+
+#flights {
+    margin-top: 20px;
+}
+
 .flight {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -20,6 +30,7 @@ h1 {
     align-items: center;
     gap: 15px;
 }
+
 .flight img {
     max-width: 100px;
     height: auto;
