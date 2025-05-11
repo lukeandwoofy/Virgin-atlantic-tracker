@@ -5,10 +5,9 @@ const airportNames = {
     "KLAX": "Los Angeles International",
     "JFK": "John F. Kennedy International",
     "MAN": "Manchester Airport",
-    "BOS": "Boston Logan International",
-    "ATL": "Hartsfield–Jackson Atlanta International",
+    "EWR": "Newark Liberty International",
     "SFO": "San Francisco International",
-    // Add more airports as needed
+    // Add more based on the API data
 };
 
 const planeImages = {
@@ -42,8 +41,8 @@ async function fetchFlights() {
             const arrival = flight[3] || "Unknown Code";
 
             // Map ICAO codes to airport names (fallback to raw code if not found)
-            const departureName = airportNames[departure] || departure;
-            const arrivalName = airportNames[arrival] || arrival;
+            const departureName = airportNames[departure] || "Unknown Airport";
+            const arrivalName = airportNames[arrival] || "Unknown Airport";
 
             return `
                 <div class="flight">
