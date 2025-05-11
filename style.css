@@ -18,7 +18,7 @@ p {
 #logo {
     display: block;
     margin: 20px auto;
-    max-width: 200px; /* Adjust size as needed */
+    max-width: 200px;
     height: auto;
 }
 
@@ -43,4 +43,34 @@ p {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#flight-info {
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+#flight-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#flight-info th,
+#flight-info td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#flight-info th {
+    background-color: #d2232a;
+    color: white;
+    font-weight: bold;
+}
+
+#flight-info td {
+    color: #333;
 }
